@@ -1,7 +1,7 @@
 # Base calling from ONT long reads using Bonito
 
 
-Bonito (https://github.com/nanoporetech/bonito) is a highly accurate deep learning basecaller for long-read DNA sequencing, using Oxford Nanopore devices.
+Bonito (https://github.com/nanoporetech/bonito) is a [Quartznet]-based Deep Learning basecaller for Oxford Nanopore long-read sequencing.
 
 ## Installation
 
@@ -11,9 +11,11 @@ pip install ont-bonito
 
 ## Data
 
-The input data for bonito is in the form of one or more .fast5 files containing the raw data output from the sequencer. 
+The input data for bonito is in the form of one or more `.fast5` files containing the raw data output from the sequencer. 
 
-We provide some example data is from ONT sequencing of the Dengue virus (obtained from https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2018.23.50.1800228). This is located in the `data` folder.
+We provide some example data is from ONT sequencing of the Dengue virus (obtained from [Eurosurveillance](https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2018.23.50.1800228)). This is located in the `data` directory.
+
+To unzip the data use the following command on linux:
 
 ```
 tar -xvzf data/Mapped_DENV_Rapid.tar.gz.1
@@ -21,14 +23,14 @@ tar -xvzf data/Mapped_DENV_Rapid.tar.gz.1
 
 ## Basecalling
 
-The `bonito basecaller` command is used to call bases. The model is named `dna_r9.4.1` and is intended for DNA sequencing data. Bonito currently does not include a model for direct RNA sequencing. The directory containing one or more .fast5 files is given as input.
+The `bonito basecaller` command is used to perform basecalling. The model is named `dna_r9.4.1` and is intended for DNA sequencing data sequenced using the R9.4.1 pore. Bonito currently does not include a model for direct RNA sequencing. The directory containing one or more .fast5 files is given as input.
 
 ```
 bonito basecaller dna_r9.4.1 data/Mapped_DENV_Rapid > basecalls.fasta
 ```
 If you have a turing or volta GPU the `--half` flag can be used to increase performance.
 
-The output is saved in .fasta format. If multiple .fast5 files are supplied as input, all basecalled read sequences are present in the same output file.
+The output is saved in `.fasta` format. If multiple `.fast5` files are supplied as input, all basecalled read sequences are present in the same output file.
 
 ```
 head Mapped_DENV_Rapid.fasta 

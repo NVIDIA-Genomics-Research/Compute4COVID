@@ -1,7 +1,7 @@
 # Base calling from ONT long reads using Bonito
 
 
-Bonito (https://github.com/nanoporetech/bonito) is a [Quartznet]-based Deep Learning basecaller for Oxford Nanopore long-read sequencing.
+[Bonito](https://github.com/nanoporetech/bonito) is a [Quartznet](https://arxiv.org/abs/1910.10261)-based Deep Learning basecaller for Oxford Nanopore long-read sequencing.
 
 ## Installation
 

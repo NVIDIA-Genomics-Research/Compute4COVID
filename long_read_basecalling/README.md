@@ -13,7 +13,9 @@ pip install ont-bonito
 
 The input data for bonito is in the form of one or more `.fast5` files containing the raw data output from the sequencer. 
 
-We provide some example `.fast5` files from ONT sequencing of SARS-CoV-2 using the [ARCTIC](https://artic.network/ncov-2019) protocol, collected by the [CADDE project](https://www.caddecentre.org/covid19/) [Citation](http://virological.org/t/first-report-of-covid-19-in-south-america/409). This is located in the `data` directory.
+We provide some example `.fast5` files from ONT sequencing of SARS-CoV-2 using the [ARCTIC](https://artic.network/ncov-2019) protocol, collected by the [CADDE](https://www.caddecentre.org/covid19/) project. (Citation: http://virological.org/t/first-report-of-covid-19-in-south-america/409). 
+
+This is located in the `data` directory.
 
 To extract the data use the following command:
 
